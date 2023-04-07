@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+h2 {
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: beige;
+  padding: 30px;
+  margin: auto;
+  max-width: 1020px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  align-content: flex-start;
+}
+
+.card {
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-bottom: 12px;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 5px springgreen, 0 0 5px #0080;
+  position: relative;
+}
+
+.card .like {
+  position: absolute;
+  right: 8px;
+  bottom: 6px;
+  color: darkolivegreen;
+  cursor: pointer;
+}
+
+.card .pic {
+  height: 100px;
+  width: 100%;
+  background-color: springgreen;
+  background-image: url(https://icdn.lenta.ru/images/2019/12/09/15/20191209152303260/pwa_vertical_1280_45bd677a9cbb66d2f4b4e5db79410de4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.pic.tmp {
+  background-image: url(images/default.png);
+  /* background-size: contain; */
+  background-size: auto 80%;
+}
+
