@@ -10,3 +10,15 @@ fetch(path + "/show")
       }
     }
   })
+
+addBtn.addEventListener("click", e => {
+  mdBox.classList.toggle("active");
+});
+mdClose.addEventListener("click", e => {
+  mdBox.classList.remove("active");
+});
+mdBox.addEventListener("click", e => {
+  if (e.target === e.currentTarget) {
+    mdBox.classList.remove("active");
+  }
+});

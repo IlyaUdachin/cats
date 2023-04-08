@@ -9,7 +9,7 @@ h2 {
 
 .wrapper {
   min-height: 100vh;
-  background-color: beige;
+  /* background-color: beige; */
   padding: 30px;
   margin: auto;
   max-width: 1020px;
@@ -57,3 +57,59 @@ h2 {
   background-size: auto 80%;
 }
 
+.btn {
+  outline: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: springgreen;
+}
+
+.add {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.modal-block {
+  background-color: rgb(60, 60, 60, 0.8);
+  backdrop-filter: blur(2px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-block.active {
+  display: flex;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  width: calc(100% - 100px);
+  max-width: 300px;
+  max-height: calc(100% - 100px);
+  overflow: auto;
+  position: relative;
+}
