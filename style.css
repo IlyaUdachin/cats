@@ -113,3 +113,24 @@ h2 {
   overflow: auto;
   position: relative;
 }
+
+form {
+  display: grid;
+  margin-top: 16px;
+  gap: 8px;
+}
+
+input:note([type="checkbox"]) {
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+}
+
+.preview {
+  height: 200px;
+  background-color: seagreen;
+  border-radius: 8px;
+  background-image: url("images/default.png");
+  background-position: center;
+  background-size: cover;
+}
