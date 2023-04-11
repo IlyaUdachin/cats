@@ -9,3 +9,14 @@ const prevTag = addForm.querySelector(".preview");
 let name = "IlyaUdachin";
 let path = `https://cats.petiteweb.dev/api/single/${name}`;
 
+let pets = localStorage.getItem("band-cats");
+if (pets) {
+  try {
+    pets = JSON.parse(pets);
+    for (let pet of pets) {
+      createCard(pet, block);
+    }
+  } catch(err) {
+    pets = null;
+  }
+}

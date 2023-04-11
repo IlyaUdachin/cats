@@ -1,15 +1,18 @@
-fetch(path + "/show")
-  .then(function(res){
-    return res.json();
-  })
-  .then(function(data){
-    // console.log(data);
-    if (data.length) {
-      for (let pet of data) {
-        createCard(pet, block);
+if (!pets) {
+  fetch(path + "/show")
+    .then(function(res){
+      return res.json();
+    })
+    .then(function(data){
+        if (data.length) {
+          pets = data;
+          localStorage.setItem("band-cats", JSON.stringify(data))
+          for (let pet of data) {
+            createCard(pet, block);
+        }
       }
-    }
-  })
+    })
+}
 
 addBtn.addEventListener("click", e => {
   mdBox.classList.toggle("active");
@@ -68,6 +71,8 @@ addForm.addEventListener("submit", e => {
         prevTag.style = null;
         mdBox.classList.remove("active");
         createCard(body, block);
+        pets.push(body);
+        localStorage.setItem("band-cats", JSON.stringify(pets));
       }
     })
   //  .then(res => {
