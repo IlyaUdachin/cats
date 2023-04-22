@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: sans-serif;
+  background-color: rgb(240, 240, 240);
 }
 
 h2 {
@@ -10,13 +11,13 @@ h2 {
 .wrapper {
   min-height: 100vh;
   /* background-color: beige; */
-  padding: 30px;
+  padding: 50px;
   margin: auto;
   max-width: 1020px;
   box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 50px;
   align-content: flex-start;
 }
 
@@ -29,8 +30,9 @@ h2 {
   align-items: center;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 0 5px springgreen, 0 0 5px #0080;
+  box-shadow: 0 0 5px rgb(100, 107, 103), 0 0 5px #0080;
   position: relative;
+  background-color: #fff;
 }
 
 .card .like {
@@ -63,14 +65,14 @@ h2 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: blueviolet;
+  background-color: darkolivegreen;
   color: #fff;
   font-size: 1.2rem;
   cursor: pointer;
 }
 
 .btn:hover {
-  color: springgreen;
+  color: rgb(0, 149, 45);
 }
 
 .add {
